@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.runninghusky.coupons" android:versionCode="3"
+	android:versionName="1.1.0.1">
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<!-- 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+<!-- 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+	<supports-screens android:smallScreens="true"
+		android:normalScreens="true" android:largeScreens="true"
+		android:anyDensity="true" />
+	<uses-sdk android:minSdkVersion="7" />
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:name=".StartActivity" android:label="@string/app_name"
+			android:configChanges="keyboard|keyboardHidden|orientation"
+			android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="OpenCoupon" android:theme="@android:style/Theme.NoTitleBar"></activity>
+		<activity android:name="CouponActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+		<activity android:name="CategoryActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+		<activity android:name="CategoriedCouponActivity"
+			android:theme="@android:style/Theme.NoTitleBar"></activity>
+
+	</application>
+</manifest>
